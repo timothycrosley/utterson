@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="posts">
+  {% for article in articles_page.objects_list %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ article.url }}">
+        {{ article.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ article.locale_date }}</span>
+
+    {{ article.summary }}
+    <!-- TODO: Add continue reading -->
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if articles_previous_page %}
+    <a class="pagination-item newer" href="{{ BASEURL }}index{{ articles_previous_page }}">Newer</a>
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+  {% if articles_next_page %}
+    <a class="pagination-item older" href="{{ BASEURL }}index{{ articles_next_page }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+</div>
+{% endblock %}

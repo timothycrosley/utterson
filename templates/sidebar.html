@@ -1,0 +1,24 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="{{ BASEURL }}">
+          {{ TITLE }}
+        </a>
+      </h1>
+      <p class="lead">{{ DESCRIPTION }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == BASEURL %} active{% endif %}" href="{{ BASEURL }}">Home</a>
+
+      {% for title, link in MENUITEMS %}
+        <a class="sidebar-nav-item" href="{{ link }}">{{ title }}</a>
+      {% endfor %}
+
+      <!-- TODO: Add social links -->
+    </nav>
+
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </div>
+</div>
