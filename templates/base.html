@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  {% include head.html %}
+  {% include 'head.html' %}
 
+  <!-- TODO: Add theme color variable -->
   <body>
 
-    {% include sidebar.html %}
+    {% include 'sidebar.html' %}
 
     <div class="content container">
-      {{ content }}
+      {% block content %}
+      {% endblock %}
     </div>
 
   </body>

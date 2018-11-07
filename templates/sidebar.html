@@ -10,7 +10,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == BASEURL %} active{% endif %}" href="{{ BASEURL }}">Home</a>
+      <a class="sidebar-nav-item" href="{{ BASEURL }}">Home</a>
 
       {% for title, link in MENUITEMS %}
         <a class="sidebar-nav-item" href="{{ link }}">{{ title }}</a>
@@ -19,6 +19,7 @@
       <!-- TODO: Add social links -->
     </nav>
 
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    <p>&copy; 2018. All rights reserved.</p>
+    <!-- TODO: Add dynamic date -->
   </div>
 </div>

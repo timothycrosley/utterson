@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
 <div class="post">
@@ -6,7 +6,7 @@
   <span class="post-date">{{ article.locale_date }}</span>
   {{ article.content }}
 
-  {{ include disqus.html }}
+  {% include 'disqus.html' %}
 </div>
 
 {% if article.related_posts %}

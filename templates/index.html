@@ -1,8 +1,8 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
 <div class="posts">
-  {% for article in articles_page.objects_list %}
+  {% for article in articles_page.object_list %}
   <div class="post">
     <h1 class="post-title">
       <a href="{{ article.url }}">
@@ -20,12 +20,16 @@
 
 <div class="pagination">
   {% if articles_previous_page %}
-    <a class="pagination-item newer" href="{{ BASEURL }}index{{ articles_previous_page }}">Newer</a>
+    {% if articles_page.number == 2 %}
+      <a class="pagination-item newer" href="{{ BASEURL }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ BASEURL }}index{{ articles_previous_page.number }}.html">Newer</a>
+    {% endif %}
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
   {% if articles_next_page %}
-    <a class="pagination-item older" href="{{ BASEURL }}index{{ articles_next_page }}">Older</a>
+    <a class="pagination-item older" href="{{ BASEURL }}index{{ articles_next_page.number }}.html">Older</a>
   {% else %}
     <span class="pagination-item older">Older</span>
   {% endif %}
