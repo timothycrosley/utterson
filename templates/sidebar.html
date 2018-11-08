@@ -19,11 +19,18 @@
       {% for title, link in MENUITEMS %}
         <a class="sidebar-nav-item" href="{{ link }}">{{ title }}</a>
       {% endfor %}
-
-      <!-- TODO: Add social links -->
     </nav>
 
-    <p>&copy; 2018. All rights reserved.</p>
-    <!-- TODO: Add dynamic date -->
+    <div class="sidebar-social">
+      {% for brand, link in SOCIAL %}
+        <a class="sidebar-social-item" href="{{ link }}" target="_blank">
+          <i class="fab fa-lg fa-{{ brand }}"></i>
+        </a>
+      {% endfor %}
+    </div>
+
+    <div class="sidebar-copyright">
+      <p>&copy; {{ YEAR }}. Powered by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a> and <a href="https://github.com/vinayak-mehta/utterson" target="_blank">Utterson</a>.</p>
+    </div>
   </div>
 </div>

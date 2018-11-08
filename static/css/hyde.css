@@ -99,6 +99,21 @@ a.sidebar-nav-item:focus {
   font-weight: bold;
 }
 
+/* Sidebar social */
+.sidebar-social {
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.sidebar-social-item {
+  display: block;
+  margin: 0.5rem;
+  margin-left: 0;
+  float: left;
+}
+
+/* Sidebar copyright */
+/* .sidebar-copyright {} */
+
 /* Sticky sidebar
  *
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
