@@ -101,13 +101,10 @@ a.sidebar-nav-item:focus {
 
 /* Sidebar social */
 .sidebar-social {
-  overflow: hidden;
   margin-bottom: 1rem;
 }
 .sidebar-social-item {
-  display: block;
-  margin-right: 0.5rem;
-  float: left;
+  margin-right: 0.2rem;
 }
 
 /* Sidebar copyright */
