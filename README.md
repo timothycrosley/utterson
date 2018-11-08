@@ -24,7 +24,13 @@ THEME = '/path/to/utterson'
 
 Utterson supports all Hyde features in addition to its own.
 
+You can define the following variables in your `pelicanconf.py` to use the corresponding features.
+
 <table><table>
+  <tr>
+    <th>Variable</th>
+    <th>Feature</th>
+  </tr>
   <tr>
     <td><kbd>TITLE</kbd></td>
     <td>Adds sidebar title.</td>
@@ -49,8 +55,8 @@ Utterson supports all Hyde features in addition to its own.
     <td><kbd>SOCIAL</kbd></td>
     <td>Adds sidebar social links using <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> (follows tuple order). The brand name is appended to Font Awesome's <kbd>fa-</kbd>. For example: <kbd>github</kbd> will become <kbd>fa-github</kbd>.
         <pre>SOCIAL = (
-    ('github' , '<github_url>'),
-    ('twitter' , '<twitter_url>'),)</pre>
+    ('github' , '&lt;github_url&gt;'),
+    ('twitter' , '&lt;twitter_url&gt;'),)</pre>
     </td>
   </tr>
   <tr>
