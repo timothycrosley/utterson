@@ -3,10 +3,8 @@
 {% block content %}
 <div class="post">
   <h1 class="post-title">{{ article.title }}</h1>
-  <span class="post-date">{{ article.locale_date }}</span>
+  <span class="post-date">{{ article.date|strftime('%d %B %Y') }}</span>
   {{ article.content }}
-
-  {% include 'disqus.html' %}
 </div>
 
 {% if article.related_posts %}
@@ -16,14 +14,32 @@
     {% for article in article.related_posts %}
       <li>
         <h3>
-          <a href="{{ article.url }}">
+          <a href="{{ SITEURL }}/{{ article.url }}">
             {{ article.title }}
-            <small>{{ article.locale_date }}</small>
+            <small>{{ article.date|strftime('%d %B %Y') }}</small>
           </a>
         </h3>
       </li>
     {% endfor %}
   </ul>
+</div>
+{% endif %}
+
+{% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
+<div class="comments">
+  <h2>Comments!</h2>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = '{{ DISQUS_SITENAME }}';
+    var disqus_identifier = '{{ article.url }}';
+    var disqus_url = '{{ SITEURL }}/{{ article.url }}';
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
 </div>
 {% endif %}
 {% endblock %}

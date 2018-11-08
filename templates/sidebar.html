@@ -2,19 +2,15 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="{{ BASEURL }}">
+        <a href="{{ SITEURL }}">
           {{ TITLE }}
         </a>
       </h1>
       <p class="lead">{{ DESCRIPTION }}</p>
     </div>
 
-    <!-- TODO: Add display image -->
-    <!-- http://flex.alxd.me/blog/ -->
-    <!-- http://gael-varoquaux.info -->
-
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="{{ BASEURL }}">Home</a>
+      <a class="sidebar-nav-item" href="{{ SITEURL }}">Home</a>
 
       {% for title, link in MENUITEMS %}
         <a class="sidebar-nav-item" href="{{ link }}">{{ title }}</a>

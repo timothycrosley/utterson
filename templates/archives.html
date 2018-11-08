@@ -5,8 +5,8 @@
   <h1 class="page-title">Archives</h1>
   <dl>
     {% for article in dates %}
-      <dt>{{ article.locale_date }}</dt>
-      <dd><a href="{{ article.url }}">{{ article.title }}</a></dd>
+      <dt>{{ article.date|strftime('%d %B %Y') }}</dt>
+      <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
     {% endfor %}
   </dl>
 </div>

@@ -5,15 +5,18 @@
   {% for article in articles_page.object_list %}
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ article.url }}">
+      <a href="{{ SITEURL }}/{{ article.url }}">
         {{ article.title }}
       </a>
     </h1>
 
-    <span class="post-date">{{ article.locale_date }}</span>
+    <span class="post-date">{{ article.date|strftime('%d %B %Y') }}</span>
 
     {{ article.summary }}
-    <!-- TODO: Add continue reading -->
+    <a class="post-link" href="{{ SITEURL }}/{{ article.url }}">
+      Read <i class="fa fa-arrow-right"></i>
+    </a>
+    {% include 'comments.html' %}
   </div>
   {% endfor %}
 </div>
@@ -21,15 +24,15 @@
 <div class="pagination">
   {% if articles_previous_page %}
     {% if articles_page.number == 2 %}
-      <a class="pagination-item newer" href="{{ BASEURL }}">Newer</a>
+      <a class="pagination-item newer" href="{{ SITEURL }}">Newer</a>
     {% else %}
-      <a class="pagination-item newer" href="{{ BASEURL }}index{{ articles_previous_page.number }}.html">Newer</a>
+      <a class="pagination-item newer" href="{{ SITEURL }}/index{{ articles_previous_page.number }}.html">Newer</a>
     {% endif %}
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
   {% if articles_next_page %}
-    <a class="pagination-item older" href="{{ BASEURL }}index{{ articles_next_page.number }}.html">Older</a>
+    <a class="pagination-item older" href="{{ SITEURL }}/index{{ articles_next_page.number }}.html">Older</a>
   {% else %}
     <span class="pagination-item older">Older</span>
   {% endif %}
