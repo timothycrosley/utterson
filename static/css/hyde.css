@@ -106,8 +106,7 @@ a.sidebar-nav-item:focus {
 }
 .sidebar-social-item {
   display: block;
-  margin: 0.5rem;
-  margin-left: 0;
+  margin-right: 0.5rem;
   float: left;
 }
 
