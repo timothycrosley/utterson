@@ -12,7 +12,13 @@ You can see how this theme looks like at [https://www.vinayakmehta.com](https://
 
 ## Screenshot
 
+### Desktop
+
 ![screenshot](/screenshot.png)
+
+### Phone
+
+![screenshot-mobile](/screenshot-mobile.png)
 
 ## Usage
 
