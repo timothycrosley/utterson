@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
-{% set title = page.title %}
+{% set type = 'website' %}
+{% set title = page.title + ' - ' + TITLE %}
+{% set description = DESCRIPTION|e %}
+{% set url = SITEURL + '/' + page.url %}
+{% set image = SITEIMAGE %}
 
 {% block content %}
 <div class="page">

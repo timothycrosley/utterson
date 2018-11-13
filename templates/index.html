@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
+{% set type = 'website' %}
 {% set title = TITLE + ' \u00B7 ' + TAGLINE %}
+{% set description = DESCRIPTION|e %}
+{% set url = SITEURL %}
+{% set image = SITEIMAGE %}
 
 {% block content %}
 <div class="posts">
@@ -11,7 +15,7 @@
       </a>
     </h1>
 
-    {% if article.stats is defined %}
+    {% if article.stats %}
       <span class="post-date">{{ article.date|strftime('%d %B %Y') }} &middot; {{ article.stats['read_mins'] }} min read</span>
     {% else %}
       <span class="post-date">{{ article.date|strftime('%d %B %Y') }}</span>

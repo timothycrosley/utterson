@@ -82,9 +82,8 @@ You can define the following variables in your `pelicanconf.py` to use the corre
 ## Supported Plugins
 
 - [GitHub Corners](https://github.com/tholman/github-corners)
-- [Related posts](https://github.com/getpelican/pelican-plugins/tree/master/related_posts)
 - [n minute read](https://github.com/getpelican/pelican-plugins/tree/master/post_stats)
-- [Representative image](https://github.com/getpelican/pelican-plugins/tree/master/representative_image) (in 0.2.0)
+- [Related posts](https://github.com/getpelican/pelican-plugins/tree/master/related_posts)
 
 ## Contributing
 

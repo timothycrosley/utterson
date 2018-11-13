@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
-{% set title = article.title %}
+{% set type = 'article' %}
+{% set title = article.title + ' - ' + TITLE %}
+{% set description = article.description|e %}
+{% set url = SITEURL + '/' + article.url %}
+{% set image = article.image %}
 
 {% block content %}
 <div class="post">
@@ -16,12 +20,16 @@
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    {% for article in article.related_posts %}
+    {% for related_article in article.related_posts %}
       <li>
         <h3>
-          <a href="{{ SITEURL }}/{{ article.url }}">
-            {{ article.title }}
-            <small>{{ article.date|strftime('%d %B %Y') }}</small>
+          <a href="{{ SITEURL }}/{{ related_article.url }}">
+            {{ related_article.title }}
+            {% if related_article.stats %}
+              <small>{{ related_article.date|strftime('%d %B %Y') }} &middot; {{ related_article.stats['read_mins'] }} min read</small>
+            {% else %}
+              <small>{{ related_article.date|strftime('%d %B %Y') }}</small>
+            {% endif %}
           </a>
         </h3>
       </li>
