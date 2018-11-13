@@ -11,7 +11,7 @@
       </a>
     </h1>
 
-    <span class="post-date">{{ article.date|strftime('%d %B %Y') }}</span>
+    <span class="post-date">{{ article.date|strftime('%d %B %Y') }} &middot; {{ article.stats['read_mins'] }} min read</span>
 
     {{ article.summary }}
     <a class="post-link" href="{{ SITEURL }}/{{ article.url }}">
