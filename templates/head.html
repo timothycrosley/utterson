@@ -5,23 +5,27 @@
 
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="HandheldFriendly" content="True">
+
+  <!-- Description -->
+  <meta name="robots" content="index,follow">
   <meta name="description" content="{{ description }}"/>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ title }}" />
+  <meta name="twitter:description" content="{{ description }}" />
+  <meta name="twitter:image" content="{{ image }}" />
 
   <!-- Open Graph -->
   <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="{{ title }}" />
   <meta property="og:type" content="{{ type }}" />
   <meta property="og:title" content="{{ title }}" />
   <meta property="og:description" content=" {{ description }} " />
   <meta property="og:url" content="{{ url }}" />
-  <meta property="og:site_name" content="{{ title }}" />
   <meta property="og:image" content="{{ image }}" />
   <meta property="og:image:secure_url" content="{{ image }}" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:description" content="{{ description }}" />
-  <meta name="twitter:title" content="{{ title }}" />
-  <meta name="twitter:image" content="{{ image }}" />
 
   <title>
     {{ title }}
