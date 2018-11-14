@@ -39,14 +39,10 @@ You can define the following variables in your `pelicanconf.py` to use the corre
   </tr>
   <tr>
     <td><kbd>TITLE</kbd></td>
-    <td>Adds sidebar title.</td>
+    <td>Adds website and sidebar title.</td>
   </tr>
   <tr>
-    <td><kbd>TAGLINE</kbd></td>
-    <td>Adds website title.</td>
-  </tr>
-  <tr>
-    <td><kbd>DESCRIPTION</kbd></td>
+    <td><kbd>DESCRIPTION_SIDEBAR</kbd></td>
     <td>Adds sidebar description.</td>
   </tr>
   <tr>

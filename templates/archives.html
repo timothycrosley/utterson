@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
+{% set type = 'website' %}
 {% set title = 'Archives' + ' - ' + TITLE %}
+{% set description = DESCRIPTION|e %}
+{% set url = SITEURL + '/archives' %}
+{% set image = SITEIMAGE %}
 
 {% block content %}
 <div class="page">
