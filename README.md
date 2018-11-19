@@ -73,6 +73,10 @@ You can define the following variables in your `pelicanconf.py` to use the corre
     <td><kbd>DISQUS_SITENAME</kbd></td>
     <td>Adds Disqus comments on an article's page.</td>
   </tr>
+  <tr>
+    <td><kbd>TINYLETTER_USERNAME</kbd></td>
+    <td>Adds TinyLetter link to sidebar. You would also need to specify the newsletter name using <kbd>TINYLETTER_NEWSLETTER</kbd>.</td>
+  </tr>
 </table>
 
 ## Supported Plugins

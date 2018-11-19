@@ -1,5 +1,5 @@
 <div class="sidebar">
-  <div class="container sidebar-sticky">
+  <div class="container">
     <div class="sidebar-about">
       <h1>
         <a href="{{ SITEURL }}">
@@ -11,7 +11,6 @@
 
     <nav class="sidebar-nav">
       <a class="sidebar-nav-item" href="{{ SITEURL }}">Home</a>
-
       {% for title, link in MENUITEMS %}
         <a class="sidebar-nav-item" href="{{ link }}">{{ title }}</a>
       {% endfor %}
@@ -23,6 +22,12 @@
           <i class="fab fa-lg fa-{{ brand }}"></i>
         </a>
       {% endfor %}
+    </div>
+
+    <div class="sidebar-newsletter">
+      {% if TINYLETTER_USERNAME and TINYLETTER_NEWSLETTER %}
+        <p>Join <a href="https://tinyletter.com/{{ TINYLETTER_USERNAME }}" target="_blank">{{ TINYLETTER_NEWSLETTER }}</a> to receive updates on upcoming projects and new blog posts.</p>
+      {% endif %}
     </div>
 
     <div class="sidebar-copyright">

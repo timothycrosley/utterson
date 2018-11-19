@@ -107,8 +107,17 @@ a.sidebar-nav-item:focus {
   margin-right: 0.2rem;
 }
 
+/* Sidebar newsletter */
+/* .sidebar-newsletter {} */
+.sidebar-newsletter p {
+  font-size: 0.85rem;
+}
+
 /* Sidebar copyright */
 /* .sidebar-copyright {} */
+.sidebar-copyright p {
+  font-size: 0.85rem;
+}
 
 /* Sticky sidebar
  *
