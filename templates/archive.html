@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% set type = 'website' %}
-{% set title = 'Archives' + ' - ' + TITLE %}
+{% set title = 'Archive' + ' - ' + TITLE %}
 {% set description = DESCRIPTION|e %}
-{% set url = SITEURL + '/archives' %}
+{% set url = SITEURL + '/archive' %}
 {% set image = SITEIMAGE %}
 
 {% block content %}
 <div class="page">
-  <h1 class="page-title">Archives</h1>
+  <h1 class="page-title">Archive</h1>
   <dl>
     {% for article in dates %}
       <dt>{{ article.date|strftime('%d %B %Y') }}</dt>
