@@ -50,7 +50,7 @@ You can define the following variables in your `pelicanconf.py` to use the corre
     <td>Adds sidebar menu items. For example:
         <pre>MENUITEMS = [
     ('About' , '/about' ),
-    ('Archives' , '/archives.html')]</pre>
+    ('Archive' , '/archive.html')]</pre>
     </td>
   </tr>
   <tr>
